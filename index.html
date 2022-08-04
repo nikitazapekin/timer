@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="download_container">
+    <a href="#" class="download_btn">Download <i class="fasfa_download"></i></a>
+    <div class="countdown"></div>
+    <div class="please_wait">Please wait</div>
+    <div class="manualdownload">virvijvji</div>
+</div>
+<style>
+    .countdown {
+        text-align: center;
+
+    }
+</style>
+<script>
+    const download =document.querySelector('.download_btn');
+    const countdown =document.querySelector('.countdown');
+    const pleasewaittext = document.querySelector('.please_wait');
+    const manualdownloadlink = document.querySelector('.manualdownload');
+    let timeLeft=10;
+    download.addEventListener('click', () => {
+        download.style.display = "none";
+        countdown.innerHTML = "krgjrejgjhf" +"<br>" + timeLeft;
+        let downloadTimer =setInterval(function timecount(){
+         timeLeft--;
+         countdown.innerHTML="krgjrejgjhf" +"<br>" + timeLeft;
+         if(timeLeft <=0){
+             clearInterval(downloadTimer); /* останавливаем этот бесовской аппарат */
+         }
+        }, 1000)
+    })
+   /* window.onerror = window.close(); */
+</script>
+</body>
+</html>
